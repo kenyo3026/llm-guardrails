@@ -1,0 +1,44 @@
+# venv
+.venv
+
+# .cursor
+.cursor/
+.cursorignore
+
+# .DS_Store
+.DS_Store
+
+# .python-version
+.python-version
+
+# __pycache__
+__pycache__
+
+# jupyter
+*.ipynb
+
+# test files
+test_*.py
+!src/cascadeguard/tests/*.py
+
+# test reports
+src/cascadeguard/tests/reports/
+
+# Python package development
+*.egg-info/
+build/
+dist/
+*.egg
+
+# directories
+configs/*
+scripts
+
+# Coverage reports
+.coverage
+coverage.xml
+htmlcov/
+
+# *.json
+*.json
+

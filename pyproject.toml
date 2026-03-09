@@ -1,0 +1,29 @@
+[project]
+name = "llm-guardrails"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "argilla>=2.8.0",
+    "config-morpher",
+    "litellm>=1.80.11",
+    "rich>=13.0.0",
+    "instructor>=1.0.0",
+    "pydantic>=2.0.0",
+    "aiohttp>=3.9.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
+    "fastmcp>=0.2.0",
+    "guardrails-ai>=0.9.1",
+    "llm-guard>=0.3.16",
+    "cryptography>=42.0.0,<43.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.uv.sources]
+config-morpher = { git = "https://github.com/kenyo3026/configmorpher.git" }
