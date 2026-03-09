@@ -1739,7 +1739,7 @@ wheels = [
 [[package]]
 name = "llm-guardrails"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "aiohttp" },
     { name = "argilla" },
