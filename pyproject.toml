@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "llm-guardrails"
 version = "0.1.0"
@@ -24,6 +28,12 @@ dependencies = [
 dev = [
     "pytest>=8.0.0",
 ]
+
+[project.scripts]
+guardrail = "cascadeguard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.uv.sources]
 config-morpher = { git = "https://github.com/kenyo3026/configmorpher.git" }
