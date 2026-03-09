@@ -32,6 +32,7 @@ dev = [
 [project.scripts]
 guardrail = "cascadeguard.cli:main"
 guardrail-api = "cascadeguard.api:main"
+guardrail-mcp = "cascadeguard.mcp:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
