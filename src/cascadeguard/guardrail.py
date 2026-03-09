@@ -98,7 +98,10 @@ class CascadeGuard:
 
         if self.preranker:
             for data in datas:
-                data.sanitized_output, data.is_valid, data.risk_score = self.preranker.scan(data.prompt, data.output)
+                sanitized, is_valid, risk = self.preranker.scan(data.prompt, data.output)
+                data.sanitized_output = sanitized
+                data.is_valid = bool(is_valid)
+                data.risk_score = float(risk) if risk is not None else risk
 
             datas = [d for d in datas if d.is_valid == winnow_down]
 
