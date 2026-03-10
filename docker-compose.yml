@@ -1,0 +1,15 @@
+services:
+  guardrail-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: llm-guardrails-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount config for override without rebuild
+      - ./configs:/app/configs
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: guardrail-api --host 0.0.0.0 --port 8000
+    restart: unless-stopped
