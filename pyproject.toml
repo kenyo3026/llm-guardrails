@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "argilla>=2.8.0",
-    "config-morpher",
+    "config-morpher @ git+https://github.com/kenyo3026/configmorpher.git",
     "litellm>=1.80.11",
     "rich>=13.0.0",
     "instructor>=1.0.0",
@@ -37,5 +37,3 @@ guardrail-mcp = "cascadeguard.mcp:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
-[tool.uv.sources]
-config-morpher = { git = "https://github.com/kenyo3026/configmorpher.git" }
