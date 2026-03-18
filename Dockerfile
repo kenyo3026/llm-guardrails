@@ -11,6 +11,9 @@ COPY pyproject.toml ./
 COPY src/ ./src/
 COPY configs/ ./configs/
 
+# Install CPU-only PyTorch first (avoid pulling CUDA)
+RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
 # Install dependencies
 RUN pip install --no-cache-dir -e .
 
