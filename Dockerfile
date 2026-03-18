@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends git \
 # Copy project files
 COPY pyproject.toml ./
 COPY src/ ./src/
+RUN mkdir -p configs
 COPY configs/ ./configs/
 
 # Install CPU-only PyTorch first (avoid pulling CUDA)
